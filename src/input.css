@@ -1,0 +1,41 @@
+﻿@import "tailwindcss";
+
+:root {
+  --bg: #121316;
+  --bg-2: #1a1c20;
+  --accent: #3e7ad6;
+  --text: #f3f5f7;
+  --muted: #a7adb8;
+}
+
+body {
+  font-family: "Poppins", "Montserrat", "Trebuchet MS", sans-serif;
+  background: #111316;
+  color: var(--text);
+}
+
+.wheel-shadow {
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45), 0 0 0 6px rgba(255, 255, 255, 0.05);
+}
+
+.card {
+  background: #1a1c20;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-spin {
+  background: #e7eaef;
+  color: #111316;
+}
+
+#wheel-wrap {
+  transform-origin: center;
+}
+
+@keyframes floaty {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+.floaty { animation: floaty 4s ease-in-out infinite; }

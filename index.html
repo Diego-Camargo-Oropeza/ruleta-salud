@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruleta Saludzzz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/styles.css" />
+  </head>
+  <body class="min-h-screen">
+    <main class="mx-auto flex min-h-screen w-full max-w-6xl flex-col items-center justify-center gap-6 px-4 py-8">
+      <section class="flex w-full max-w-5xl flex-col items-center gap-6">
+        <div class="card relative flex w-full flex-col items-center gap-6 rounded-3xl p-6">
+          <div class="relative">
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+              <div class="h-0 w-0 border-l-[16px] border-r-[16px] border-b-[28px] border-l-transparent border-r-transparent border-b-[#e7eaef]"></div>
+            </div>
+            <div id="wheel-wrap" class="wheel-shadow relative rounded-full bg-[#101429] p-4">
+              <canvas id="wheel" class="block"></canvas>
+            </div>
+          </div>
+
+          <button
+            id="spin-btn"
+            class="btn-spin floaty w-full max-w-xs rounded-full px-6 py-3 text-center text-lg font-semibold text-black shadow-lg transition hover:scale-[1.02]"
+          >
+            Girar ruleta
+          </button>
+
+        </div>
+      </section>
+    </main>
+
+    <div
+      id="video-modal"
+      class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 p-4"
+      aria-hidden="true"
+    >
+      <div class="card w-full max-w-4xl rounded-3xl p-4">
+        <div class="mb-3 flex items-center justify-between">
+          <h3 class="text-sm uppercase tracking-[0.25em] text-[#ffd166]">Demo en grande</h3>
+          <button
+            id="modal-close"
+            class="rounded-full border border-white/20 px-3 py-1 text-xs text-[var(--muted)] transition hover:text-white"
+          >
+            Cerrar
+          </button>
+        </div>
+        <div class="aspect-video w-full overflow-hidden rounded-2xl border border-white/10 bg-black/40">
+          <iframe
+            id="modal-video"
+            class="h-full w-full"
+            src="https://www.youtube.com/embed/AnYl6Nk9GOA?rel=0"
+            title="Demo ejercicio grande"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="mt-4 rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+          <div id="modal-name" class="text-sm text-[var(--muted)]">Ejercicio</div>
+          <div id="modal-reps" class="text-2xl font-bold">- reps</div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
