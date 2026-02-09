@@ -16,22 +16,23 @@
     <main class="mx-auto flex min-h-screen w-full max-w-6xl flex-col items-center justify-center gap-6 px-4 py-8">
       <section class="flex w-full max-w-5xl flex-col items-center gap-6">
         <div class="card relative flex w-full flex-col items-center gap-6 rounded-3xl p-6">
-          <div class="relative">
-            <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-              <div class="h-0 w-0 border-l-[16px] border-r-[16px] border-b-[28px] border-l-transparent border-r-transparent border-b-[#e7eaef]"></div>
+          <div class="flex w-full flex-col items-center justify-center gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div class="relative">
+              <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+                <div class="h-0 w-0 border-l-[16px] border-r-[16px] border-b-[28px] border-l-transparent border-r-transparent border-b-[#e7eaef]"></div>
+              </div>
+              <div id="wheel-wrap" class="wheel-shadow relative rounded-full bg-[#101429] p-4">
+                <canvas id="wheel" class="block"></canvas>
+              </div>
             </div>
-            <div id="wheel-wrap" class="wheel-shadow relative rounded-full bg-[#101429] p-4">
-              <canvas id="wheel" class="block"></canvas>
-            </div>
+
+            <button
+              id="spin-btn"
+              class="btn-spin floaty w-full max-w-xs rounded-full px-6 py-3 text-center text-lg font-semibold text-black shadow-lg transition hover:scale-[1.02]"
+            >
+              Girar ruleta
+            </button>
           </div>
-
-          <button
-            id="spin-btn"
-            class="btn-spin floaty w-full max-w-xs rounded-full px-6 py-3 text-center text-lg font-semibold text-black shadow-lg transition hover:scale-[1.02]"
-          >
-            Girar ruleta
-          </button>
-
         </div>
       </section>
     </main>

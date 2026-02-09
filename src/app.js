@@ -112,7 +112,9 @@ const buildImageCache = () => {
 };
 
 const sizeCanvas = () => {
-  const maxSize = Math.min(1400, Math.max(620, wheelWrap.clientWidth - 8));
+  const viewportMin = Math.min(window.innerWidth, window.innerHeight);
+  const viewportCap = Math.max(300, viewportMin - 120);
+  const maxSize = Math.min(1400, viewportCap, Math.max(620, wheelWrap.clientWidth - 8));
   const ratio = window.devicePixelRatio || 1;
   wheelCanvas.width = maxSize * ratio;
   wheelCanvas.height = maxSize * ratio;
